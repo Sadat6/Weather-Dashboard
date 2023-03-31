@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.WeatherdashBoard{
+    background-color: green;
+    text-align: center;
+    
+}
+.WeatherdashBoard > h1{
+    padding: 30px;
+    color: white;
+}
+.flex-container{
+    display: flex;
+    background-color: yellow;
+    
+}
+.sideBarLeft{
+    
+    width: 20%;;
+    background-color: green;
+}
+
+.sideBarRight{
+    
+    width: 80%;
+    background-color: rgb(99, 198, 132);
+}
+.stateWeatherinfo{
+    height: 150px;
+    border: 1px solid white;
+    padding: 30px;
+}
+.stateWeatherinfo > h2, p{
+    padding: 10px;
+}
+
+.stateLists{
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+.stateLists > h3{
+    padding: 10px;
+}
+.searchBar > input, button{
+    margin: auto;
+    display: block;
+    padding: 10px;
+    margin: 10px auto;
+
+    
+    
+}
+.searchBar > h2{
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+
+}
+.fiveDaysForcast{
+    display: block;
+    background-color: white;
+    height: 250px;
+    border: 1px solid white;
+    padding: 30px;
+        
+}
+.fiveDaysForcast > h2, div{
+    padding: 10px;
+}
+.fiveDaysForcastBoxes{
+    display: flex;
+    
+}
+.fiveDaysForcastBoxes > div{
+    height: 180px;
+    width: 100%;
+    background-color: rgb(99, 198, 132);
+    margin: 15px;
+    color: white;
+}
