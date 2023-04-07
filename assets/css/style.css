@@ -33,20 +33,23 @@
     width: 80%;
     background-color: rgb(99, 198, 132);
 }
+/* Targeting STATE WEATHER INFO class and applying styles. */
 .stateWeatherinfo{
     height: 150px;
     border: 1px solid white;
     padding: 30px;
 }
+/* Selecting TAG H2 which under STATE WEATERINFO class and applying paddings. */
 .stateWeatherinfo > h2, p{
     padding: 10px;
 }
-
+/* Targeting STATE LISTS class and apply Text align property, text color property, and padding */
 .stateLists{
     text-align: center;
     color: white;
     padding: 10px;
 }
+/* Selecting H3 element which is under STATE LIST Class and apply padding property */
 .stateLists > h3{
     padding: 10px;
 }
