@@ -53,7 +53,7 @@ var dd = new Date();
 console.log(dd.getDay());
 var weekd = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-// Grabbing from Arry
+// Grabbing data from Arry which we had created on line 54 and implementing CONDITIONAL STATE using IF statement to check the condition.
 
 
 function chk_day(day){
