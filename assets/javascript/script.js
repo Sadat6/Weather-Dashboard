@@ -47,7 +47,7 @@ function settingDefaultval(){
     document.getElementById("searchInput").defaultValue = "Denver";
     mainExec();
 }
-
+// Creating variables and Array, supplying week Days for array.
 // Five Days Forecast
 var dd = new Date();
 console.log(dd.getDay());
