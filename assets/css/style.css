@@ -80,14 +80,17 @@
     padding: 30px;
         
 }
+/* Targetting H2 and DIV which are under the CLASS of Five Days Forecast and applying styles for these two elemetns. */
 .fiveDaysForcast > h2, div{
     padding: 10px;
     
 }
+/* Selecting FIVE DAYS FORECAST box and make it responsive by setting the Display property to FlexBox */
 .fiveDaysForcastBoxes{
     display: flex;
     
 }
+/* Applying style for the DIV which is under the FIVE DAYS FORECAST BOXES CLASS. */
 .fiveDaysForcastBoxes > div{
     height: 300px;
     width: 100%;
@@ -96,6 +99,7 @@
     color: white;
     text-align: center;
 }
+/* Selecting Class Images and applying Height and Wight property. */
 .images{
     height: 140px;
     width: 100%;
