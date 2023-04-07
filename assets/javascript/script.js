@@ -20,7 +20,7 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q='+searchInput.value+'&
 .then(response => response.json())
 .then(data => {
 
-    //Min and Max values for a day
+    //Minimun and Maximum values for each day
     for(i = 0; i<5; i++){
         document.getElementById("d" + (i+1) + "Min").innerHTML = "Min: " + Number(data.list[i].main.temp_min);
         
