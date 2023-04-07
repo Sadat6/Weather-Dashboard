@@ -14,18 +14,20 @@
     padding: 30px;
     color: white;
 }
+/* Main container which wraps all the elements after FOOTER */
 .flex-container{
     display: flex;
     background-color: yellow;
 
     
 }
+/* It selects the left Side Bar under FLEX CONTAINER CLASS */
 .sideBarLeft{
     
     width: 20%;;
     background-color: green;
 }
-
+/* Selecting RIGHT SIDE BAR which is under FLEX CONTAINER */
 .sideBarRight{
     
     width: 80%;
