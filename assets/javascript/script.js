@@ -42,7 +42,7 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q='+searchInput.value+'&
 
 .catch(err => alert("Check your Internet Gateway."))
 }
-
+// Creating this function to SET a default Value for our Search Input Field and Supplying DENVER CITY as the primary city when each times a page is loaded.
 function settingDefaultval(){
     document.getElementById("searchInput").defaultValue = "Denver";
     mainExec();
