@@ -1,13 +1,15 @@
+/* Universal Selector */
 *{
     margin: 0;
     padding: 0;
 }
-
+/* Weather Dashboard style */
 .WeatherdashBoard{
     background-color: green;
     text-align: center;
     
 }
+/* Weather Dashboard style for H1 element */
 .WeatherdashBoard > h1{
     padding: 30px;
     color: white;
@@ -15,6 +17,7 @@
 .flex-container{
     display: flex;
     background-color: yellow;
+
     
 }
 .sideBarLeft{
@@ -63,23 +66,30 @@
 }
 .fiveDaysForcast{
     display: block;
-    background-color: white;
-    height: 250px;
+    background-color: rgb(253, 246, 246);
+    height: auto;
     border: 1px solid white;
     padding: 30px;
         
 }
 .fiveDaysForcast > h2, div{
     padding: 10px;
+    
 }
 .fiveDaysForcastBoxes{
     display: flex;
     
 }
 .fiveDaysForcastBoxes > div{
-    height: 180px;
+    height: 300px;
     width: 100%;
     background-color: rgb(99, 198, 132);
     margin: 15px;
     color: white;
+    text-align: center;
+}
+.images{
+    height: 140px;
+    width: 100%;
+
 }

@@ -8,7 +8,7 @@
     <title>Document</title>
 
 </head>
-<body>
+<body onload="settingDefaultval()">
     
         <div class="WeatherdashBoard">
             <H1>Weather Dashboard</H1>
@@ -19,59 +19,64 @@
         <div class="sideBarLeft">
             <div class="searchBar">
                 <h2>Search for a city:</h2>
-                <input type="text" id="searchInput" placeholder="Search">
-                <button type="button">Search</button>
+                <input type="text" id="searchInput" placeholder="Search" name="array[]">
+                <button type="button" onclick="mainExec()">Search</button>
             </div>
             <div class="stateLists">
-                <h3>Atlanta</h3>
-                <h3>Denver</h3>
-                <h3>Seattle</h3>
-                <h3>San Francisco</h3>
-                <h3>Orlando</h3>
-                <h3>New York</h3>
-                <h3>Chicago</h3>
-                <h3>Austin</h3>
+                <h3 id="h3_stateList"></h3>
+                
+                
+                
             </div>
         </div>
         <div class="sideBarRight">
             <div class="stateWeatherinfo">
-                <h2>Atlanta (03/31/2023)</h2>
-                <p>Temp: 76.62 F</p>
-                <p>Wind: 8.43 MPH</p>
-                <p>Humidity: 44 %</p>
+                <h2 id="cityName"></h2>
+                
             </div>
             <div class="fiveDaysForcast">
                     <h2>5-Day Forecast:</h2>
                     <div class="fiveDaysForcastBoxes">
-                        <div>
-                            <h2>(04/01/2023)</h2>
-                            <p>Temp: 76.62 F</p>
-                            <p>Wind: 8.43 MPH</p>
-                            <p>Humidity: 44 %</p>
+                        <div id="fiveD_div1">
+                            <h2 id="d1" class="weather"></h2>
+                            <div>
+                                <img src="dots.png" class="images" id="icn1">
+                                 
+                            </div>
+                            <p id="d1Min"></p>
+                            <p id="d1Max"></p> 
                         </div>
                         <div>
-                            <h2>(04/02/2023)</h2>
-                            <p>Temp: 76.62 F</p>
-                            <p>Wind: 8.43 MPH</p>
-                            <p>Humidity: 44 %</p>
+                            <h2 id="d2"></h2>
+                            <div>
+                                <img src="dots.png" class="images" id="icn2">
+                            </div>
+                            <p id="d2Min"></p>
+                            <p id="d2Max"></p>
                         </div>
                         <div>
-                            <h2>(04/03/2023)</h2>
-                            <p>Temp: 76.62 F</p>
-                            <p>Wind: 8.43 MPH</p>
-                            <p>Humidity: 44 %</p>
+                            <h2 id="d3"></h2>
+                            <div>
+                                <img src="dots.png" class="images" id="icn3">
+                            </div>
+                            <p id="d3Min"></p>
+                            <p id="d3Max"></p>
                         </div>
                         <div>
-                            <h2>(04/04/2023)</h2>
-                            <p>Temp: 76.62 F</p>
-                            <p>Wind: 8.43 MPH</p>
-                            <p>Humidity: 44 %</p>
+                            <h2 id="d4"></h2>
+                            <div>
+                                <img src="dots.png" class="images" id="icn4">
+                            </div>
+                            <p id="d4Min"></p>
+                            <p id="d4Max"></p>
                         </div>
                         <div>
-                            <h2>(04/05/2023)</h2>
-                            <p>Temp: 76.62 F</p>
-                            <p>Wind: 8.43 MPH</p>
-                            <p>Humidity: 44 %</p>
+                            <h2 id="d5"></h2>
+                            <div>
+                                <img src="dots.png" class="images" id="icn5">
+                            </div>
+                            <p id="d5Min"></p>
+                            <p id="d5Max"></p>
                         </div>
                     </div>
                     
