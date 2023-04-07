@@ -31,7 +31,7 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q='+searchInput.value+'&
         
     }
 
-    // Grabbing Weather Icons
+    // Grabbing Weather Icons from that THIRD PARTY API.
     for(i = 0; i<5; i++){
         document.getElementById("icn" + (i+1)).src = "http://openweathermap.org/img/wn/"+data.list[i].weather[0].icon+".png";
         
