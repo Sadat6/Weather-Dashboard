@@ -13,7 +13,7 @@ console.log();
 
 
 
-
+// Created an account witch Third party APIs for weather and git an API key.
 // API Key: bb31460c5f8a5ca7382b3ed7e464a124
 // Creating Fetch
 fetch('https://api.openweathermap.org/data/2.5/forecast?q='+searchInput.value+'&appid=bb31460c5f8a5ca7382b3ed7e464a124')
