@@ -1,21 +1,22 @@
+var searHistory=[];
+var searchInput = document.getElementById('searchInput');
+var stateLists = document.querySelector('.stateLists');
+
+
+
 // Main Function to perform the overall tasks.
 function mainExec(){
-
-
-
-var searchInput = document.getElementById('searchInput');
 var cityName = document.getElementById("cityName");
-var h3_stateList = document.getElementById('h3_stateList');
 cityName.innerHTML = searchInput.value;
-h3_stateList.innerHTML = searchInput.value;
-localStorage.setItem('searchInput', searchInput.value);
+searHistory.push(searchInput.value);
+localStorage.setItem('searHistory', JSON.stringify(searHistory) );
 console.log();
-
 
 
 // Created an account witch Third party APIs for weather and git an API key.
 // API Key: bb31460c5f8a5ca7382b3ed7e464a124
-// Creating Fetch that grabs the data from Third API and passing or contactinating with our API Key so they can give us access to grab data.
+// Creating Fetch that grabs the data from Third API and passing or contactinating with our API Key 
+//so they can give us access to grab data.
 fetch('https://api.openweathermap.org/data/2.5/forecast?q='+searchInput.value+'&appid=bb31460c5f8a5ca7382b3ed7e464a124')
 .then(response => response.json())
 .then(data => {
@@ -41,20 +42,29 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q='+searchInput.value+'&
 })
 
 .catch(err => alert("Check your Internet Gateway."))
+
+pageLoad();
 }
-// Creating this function to SET a default Value for our Search Input Field and Supplying DENVER CITY as the primary city when each times a page is loaded.
+
+
+// Creating this function to SET a default Value for our Search Input Field and 
+//Supplying DENVER CITY as the primary city when each times a page is loaded.
 function settingDefaultval(){
-    document.getElementById("searchInput").defaultValue = "Denver";
-    mainExec();
+    
+        document.getElementById("searchInput").defaultValue = "Denver";
+mainExec();
+    
 }
+
+
 // Creating variables and Array, supplying week Days for array.
 // Five Days Forecast
 var dd = new Date();
 console.log(dd.getDay());
 var weekd = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-// Grabbing data from Arry which we had created on line 54 and implementing CONDITIONAL STATE using IF statement to check the condition.
-
+// Grabbing data from Arry which we had created on line 54 and implementing CONDITIONAL STATE 
+//using IF statement to check the condition.
 
 function chk_day(day){
     if(day + dd.getDay() > 6){
@@ -67,4 +77,22 @@ function chk_day(day){
 
     for(i = 0; i<5; i++){
         document.getElementById("d" + (i+1)).textContent = weekd[chk_day(i)];
+    }
+
+    // Function that creates dynamic HTML element.
+    
+    function pageLoad(){
+       searHistory = JSON.parse(localStorage.getItem('searHistory' ));
+       if(!searHistory){
+        return
+       } else {
+            stateLists.innerHTML = "";
+            for(var i=0; i<searHistory.length; i++){
+                var dynamicButton = document.createElement('button');
+                
+                dynamicButton.textContent = searHistory[i];
+                dynamicButton.setAttribute('class','automaticBtn');
+                stateLists.append(dynamicButton)
+        }
+       }
     }
