@@ -20,18 +20,18 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q='+searchInput.value+'&
 .then(data => {
 
     //Minimun and Maximum values for each day
-    for(i = 0; i<5; i++){
+    for(i = 0; i<6; i++){
         document.getElementById("d" + (i+1) + "Min").innerHTML = "Min: " + Number(data.list[i].main.temp_min);
         
     }
 
-    for(i = 0; i<5; i++){
+    for(i = 0; i<6; i++){
         document.getElementById("d" + (i+1) + "Max").innerHTML = "Max: " + Number(data.list[i].main.temp_min);
         
     }
 
     // Grabbing Weather Icons from that THIRD PARTY API.
-    for(i = 0; i<5; i++){
+    for(i = 0; i<6; i++){
         document.getElementById("icn" + (i+1)).src = "http://openweathermap.org/img/wn/"+data.list[i].weather[0].icon+".png";
         
     }
@@ -73,7 +73,7 @@ function chk_day(day){
     }
 }
 
-    for(i = 0; i<5; i++){
+    for(i = 0; i<6; i++){
         document.getElementById("d" + (i+1)).textContent = weekd[chk_day(i)];
     }
 
