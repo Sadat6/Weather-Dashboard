@@ -52,7 +52,7 @@ pageLoad();
 function settingDefaultval(){
     
         document.getElementById("searchInput").defaultValue = "Denver";
-mainExec();
+        mainExec();
     
 }
 
