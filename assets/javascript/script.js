@@ -2,8 +2,6 @@ var searHistory=[];
 var searchInput = document.getElementById('searchInput');
 var stateLists = document.querySelector('.stateLists');
 
-
-
 // Main Function to perform the overall tasks.
 function mainExec(){
 var cityName = document.getElementById("cityName");
